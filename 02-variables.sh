@@ -3,8 +3,8 @@
 PERSON=Ramesh
 PERSON=Suresh
 
-echo "$1 : Hello $2, Good Morning"
-echo "$2 : Hi $1, very good morning"
-echo "$1 : How are you $2"
-echo "$2 : I am good $1, how are you"
+echo "$PERSON1 : Hello $PERSON2, Good Morning"
+echo "$PERSON2 : Hi $PERSON1, very good morning"
+echo "$PERSON1 : How are you $PERSON2"
+echo "$PERSON2 : I am good $PERSON1, how are you"
 
