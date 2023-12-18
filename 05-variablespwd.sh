@@ -9,5 +9,5 @@ echo "username is: $USERNAME"
 echo "please enter your password"
 
 read -s PASSWORD 
-echo "username is: $USERNAME, password is: $PASSWORD" # I am printing just for validation, you should npt print username and password in scripts
+# echo "username is: $USERNAME, password is: $PASSWORD" # I am printing just for validation, you should npt print username and password in scripts
 
