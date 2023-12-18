@@ -1,3 +1,3 @@
 #!/bin/bash
 
-echo "I am learning shellscripting"
+echo "I am learning shell scripting"
