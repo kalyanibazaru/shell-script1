@@ -1,4 +1,3 @@
 #!/bin/bash
 
-echo "i m practing shell script"
-
+echo "I am learning shellscripting"
