@@ -9,3 +9,4 @@ else
 echo "you are root user"
 fi # fi means reverse of if, inducating condition end 
 
+yum install mysql -y
