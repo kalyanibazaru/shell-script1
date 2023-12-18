@@ -1,4 +1,4 @@
 #!/bin/bash
-DATE+$(date)
+DATE=$(date)
 
 echo "date and time is: ${DATE}"
