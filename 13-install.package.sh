@@ -9,4 +9,8 @@ else
     echo "you are root user"
 fi
 
-echo "All arguements passed: $@"
+#echo "All arguements passed: $@"
+for package in $@
+do
+yum
+done
