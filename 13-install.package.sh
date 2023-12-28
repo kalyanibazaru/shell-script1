@@ -17,9 +17,9 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then 
-    echo -e "$2......$R Failed $N"
+        echo -e "$2......$R Failed $N"
     else
-    echo -e "$2......$G Success $N"
+        echo -e "$2......$G Success $N"
     fi
 
 }
@@ -37,22 +37,17 @@ fi
 
 for package in $@
 do
-    yum list instaled $package &>> $LOGFILE #check installed or not
+    yum list installed $package &>> $LOGFILE #check installed or not
     if [ $? -ne 0 ]
     then
-    yum install $package -y &>> $LOGFILE # install the package
-    VALIDATE $? "Installation of $package" # validate
+        yum install $package -y &>> $LOGFILE # install the package
+
+        VALIDATE $? "Installation of $package" # validate
+
     else
-    echo -e "$package is already installed....$Y Skipping $N"
+
+        echo -e "$package is already installed....$Y Skipping $N"
+
     fi
 done
 
-
-
-
-
-
-for package in $@
-do
-yum
-done
