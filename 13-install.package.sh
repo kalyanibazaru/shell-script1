@@ -17,13 +17,14 @@ VALIDATE(){
 
     if [ $1 -ne 0 ]
     then 
-        echo -e "$2......$R Failed $N"
+        echo -e "$2 ... $R Failed $N"
     else
-        echo -e "$2......$G Success $N"
+        echo -e "$2 ... $G Success $N"
     fi
 
 }
 if [ $ID -ne 0 ]
+
 then
     echo -e "$R Error:: please run this script with root access $N"
     exit 1
@@ -36,9 +37,12 @@ fi
 #package=git for first time
 
 for package in $@
+
 do
     yum list installed $package &>> $LOGFILE #check installed or not
+    
     if [ $? -ne 0 ]
+
     then
         yum install $package -y &>> $LOGFILE # install the package
 
