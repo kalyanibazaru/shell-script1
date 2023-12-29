@@ -11,10 +11,11 @@ then
     echo -e "$R source directory: $file does not exists $N"
 fi
 
-while IFS=":" read -r username password user_id group_id user-fullname home_dir shell_path
+while IFS=":" read -r username password user_id group_id user-fullname home_dir shell_path 
+#IFS syntax from google
 
 do  
-    echo "username:$username"
+    echo "username: $username"
     echo "user ID: $user_id"
     echo "user full name: $user-fullname"
-done <$file
+done < $file
