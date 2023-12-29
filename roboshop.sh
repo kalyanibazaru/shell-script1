@@ -2,6 +2,9 @@
 
 AMI=ami-03265a0778a880afb
 SG_ID=sg-04c9524f47a17e885
+ZONE_ID=Z05569081EQSZQX9WJA3J
+DOMAIN_NAME="bkdevops.online"
+
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 
 for i in "${INSTANCES[@]}"
