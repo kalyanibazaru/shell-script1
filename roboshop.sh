@@ -2,12 +2,13 @@
 
 AMI=ami-03265a0778a880afb
 SG_ID=sg-04c9524f47a17e885
-Instances=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
+INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 
 for i in "${INSTANCES[@]}"
 
 do
-    echo "instance is: $i"
+    echo "Instance is: $i"
+
     if [ $i=="mongodb" ] || [ $i=="mysql" ] || [ $i=="shipping" ]
     then
         INSTANCE_TYPE="t3.medium"
