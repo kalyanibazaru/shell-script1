@@ -26,7 +26,7 @@ do
     echo "$i: $IP_ADDRESS"
 
 #create R53 Records
-aws route53 change-resources-record-sets\
+aws route53 change-resources-record-sets \
 --hosted-zone-id $zone_ID \
 --change_batch '
 {
