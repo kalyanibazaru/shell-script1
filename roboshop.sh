@@ -8,13 +8,13 @@ for i in "${INSTANCES[@]}"
 
 do
     echo "instance is: $i"
-if [ $i=="mongodb" ] || [ $i=="mysql" ] || [ $i=="shipping" ]
-then
-    INSTANCE_TYPE="t3.medium"
-else
-    INSTANCE_TYPE="t2.micro"
-fi
+    if [ $i=="mongodb" ] || [ $i=="mysql" ] || [ $i=="shipping" ]
+    then
+        INSTANCE_TYPE="t3.medium"
+    else
+        INSTANCE_TYPE="t2.micro"
+    fi
 
-aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t2.micro --security-group-ids sg-04c9524f47a17e885
-
+    aws ec2 run-instances --image-id ami-03265a0778a880afb --instance-type t2.micro --security-group-ids sg-04c9524f47a17e885
+done
 
