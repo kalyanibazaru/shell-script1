@@ -23,7 +23,7 @@ yum install git -y
 
 then
   echo "Error: installing mysql is failed"
-exit
+  exit 1
 else
   echo "Installing mysql is success:
 fi
